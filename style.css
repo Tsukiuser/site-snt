@@ -1,0 +1,31 @@
+h1
+{
+	border: 20px;
+	text-align: center;
+	background-color: Yellow;
+}
+p
+{
+	border: 20px;
+	font-family: Arial;
+	font-style: italic;
+	color: black;
+	background-color: grey;
+
+}
+span
+{
+	font-family: Helvetica;
+	font-style: italic;
+	color: red;
+	background-color: orange;
+}
+#para_1
+{
+	font-style: italic;
+	color: green;
+}
+img {
+	max-width : 200px;
+	max-height : 150px;
+}
