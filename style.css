@@ -1,4 +1,4 @@
-/* F1 Design Styles */
+/* Style global de la page */
 * {
     margin: 0;
     padding: 0;
@@ -15,16 +15,17 @@ body {
     min-height: 100vh;
 }
 
-/* Links */
+/* Liens */
 a {
     text-decoration: none;
     color: inherit;
     display: block;
 }
 
-/* Navbar */
+/* navbar */
 .navbar {
-    background-color: #E10600; /* Red F1 Theme */
+    background-color: #E10600;
+    /* Red F1 Theme */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -34,7 +35,8 @@ a {
 
 .logo img {
     height: 25px;
-    filter: brightness(0) invert(1); /* SVG is black, covert to white */
+    filter: brightness(0) invert(1);
+    /* SVG is black, covert to white */
     display: block;
 }
 
@@ -54,24 +56,24 @@ a {
     opacity: 0.7;
 }
 
-/* Shared Overlay for Darkening background media */
+/* cartes de la page d'acceuil */
 .overlay {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent 40%);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent 40%);
     z-index: 1;
     transition: background 0.3s ease;
 }
 
-/* Hover effect for cards only */
+/* hover effect des cartes de l'acceuil */
 .card:hover .overlay {
-    background: linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0.1));
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.1));
 }
 
-/* Hero Section */
+/* Hero */
 .hero {
     position: relative;
     width: 100%;
@@ -91,13 +93,14 @@ a {
     bottom: 40px;
     left: 40px;
     z-index: 2;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 }
 
 .hero-content p {
     font-size: 1.2rem;
     font-weight: 700;
-    margin-bottom: -5px; /* pull title closer */
+    margin-bottom: -5px;
+    /* pull title closer */
 }
 
 .hero-content h1 {
@@ -107,11 +110,12 @@ a {
     letter-spacing: -2px;
 }
 
-/* Cards Section */
+/* Cartes dela page d'acceuil */
 .cards {
     display: flex;
     width: 100%;
-    flex: 1; /* take remaining height */
+    flex: 1;
+    /* take remaining height */
     min-height: 40vh;
 }
 
@@ -144,7 +148,7 @@ a {
     bottom: 30px;
     left: 40px;
     z-index: 2;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
 }
 
 .card-content p {
@@ -160,7 +164,7 @@ a {
     letter-spacing: -1px;
 }
 
-/* Page Teams (Minimaliste) */
+/* Page Teams */
 .teams-list {
     padding: 40px;
     display: flex;
@@ -175,7 +179,8 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-left: 6px solid #E10600; /* Touche rouge F1 pour rester minimal */
+    border-left: 6px solid #E10600;
+    /* Touche rouge F1 pour rester minimal */
 }
 
 .team-row h2 {
@@ -198,44 +203,63 @@ a {
 }
 
 .car-img {
-    height: 120px; /* Taille fixe pour toutes les voitures */
+    height: 120px;
+    /* Taille fixe pour toutes les voitures */
     object-fit: contain;
 }
 
-/* Responsive adjustments */
+.driver-img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    /* Force l'image à remplir la boîte sans se déformer */
+    object-position: top;
+    /* Centre l'image sur le haut (pour cibler le visage) */
+    border-radius: 50%;
+    /* Forme arrondie comme masque des images */
+}
+
+/* ajustements globaux */
 @media (max-width: 768px) {
     .navbar {
         padding: 0 20px;
     }
+
     .cards {
         flex-direction: column;
         min-height: 60vh;
     }
+
     .card {
         min-height: 30vh;
     }
+
     .hero-content {
         left: 20px;
         bottom: 30px;
     }
+
     .hero-content h1 {
         font-size: 4rem;
     }
+
     .card-content {
         left: 20px;
         bottom: 20px;
     }
+
     .card-content h2 {
         font-size: 2.8rem;
     }
-    
-    /* Teams responsive */
+
+    /* cartes de team */
     .team-row {
         flex-direction: column;
         text-align: center;
         gap: 20px;
         padding: 20px;
     }
+
     .car-img {
         height: auto;
         max-width: 100%;
